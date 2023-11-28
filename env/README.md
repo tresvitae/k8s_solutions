@@ -18,3 +18,7 @@ kubectl port-forward pods/env-app 5000:5000
 
 # check 
 localhost:5000/pods/env-vars
+
+# update value into decalrative file and force deploy it
+kubectl apply -f config.yaml --force --grace-period 0
+kubectl get configmap/cm

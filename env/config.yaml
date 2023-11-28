@@ -1,4 +1,12 @@
 apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config
+data:
+  FIRST_VALUE: "ConfigValue"
+  SECOND_VALUE: "KubernetesValue"
+---
+apiVersion: v1
 kind: Pod
 metadata:
   name: env-app
@@ -6,3 +14,15 @@ spec:
   containers:
     - name: app
       image: app:1.0.0
+      env:
+        # Add custom data directly
+        - name: APP_NAME
+          value: my-kubernetes
+        - name: CUSTOM_DATA
+          value: abcd123
+        # Take value from ConfigMap
+        - name: MY_FIRST_VALUE
+          valueFrom:
+            configMapKeyRef:
+              name: config
+              key: FIRST_VALUE
