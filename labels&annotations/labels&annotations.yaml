@@ -5,6 +5,9 @@ metadata:
   labels:
     tier: frontend
     team: blue
+  annotations:
+    myapp.io/version.commit: "dko2mdiska9"
+    myapp.io/checksum: "2020bbbee3030cee20320cccc202kdksas00000022m2k3m3"
 spec:
   containers:
     - name: nginx
