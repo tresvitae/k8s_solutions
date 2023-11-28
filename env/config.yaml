@@ -20,9 +20,14 @@ spec:
           value: my-kubernetes
         - name: CUSTOM_DATA
           value: abcd123
-        # Take value from ConfigMap
+        # Take specific value from ConfigMap
         - name: MY_FIRST_VALUE
           valueFrom:
             configMapKeyRef:
               name: config
               key: FIRST_VALUE
+      # Take all values from ConfigMap
+      envFrom:
+        - configMapRef:
+            name: config
+            optional: true # if not exist
