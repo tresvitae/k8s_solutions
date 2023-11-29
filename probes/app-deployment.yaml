@@ -26,6 +26,8 @@ spec:
       labels:
         app: app-pod
     spec:
+      terminationGracePeriodSeconds: 20 # https://cloud.google.com/blog/products/containers-kubernetes/kubernetes-best-practices-terminating-with-grace
+      # used for close processes in the app and stop receiving traffic
       containers:
         - name: app
           image: app:1.1.0
