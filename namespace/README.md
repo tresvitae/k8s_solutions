@@ -16,3 +16,11 @@ kubectl config view | grep namespace
 ![use ohmyz.sh](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kube-ps1)
 ![use theme for Zsh](https://github.com/romkatv/powerlevel10k)
 
+## K8s communication schemes between namespaces
+[pod-ip].[namespace].pod.cluster.local
+[svc-name].[namespace].svc.cluster.local
+[port-name].[port-protocol].[svc].[namespace].svc.cluster.local
+
+kubectl apply -f ns-communication.yaml
+kubectl exec -it toolbox -n tools -- bash
+http http://app.development.svc.cluster.local:8080/pods/env-vars
