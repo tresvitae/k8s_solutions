@@ -19,3 +19,21 @@ kubectl get rs
 kubectl get pods -w
 kubectl set image deployment/nginx-deployment nginx=nginx:1.25.0
 kubectl get rs
+
+## STRATEGY
+> onfiguration od dpeloyment type strategy, two options:
+> RollingUpdate
+> Recreate
+
+kubectl apply -f strategy.yaml
+update image version and apply it
+kubectl scale deployment/app-deployment --replicas 10
+
+# strategy update process back
+kubectl rollout undo deployment/app-deployment --to-revision 1
+kubectl rollout status deployment/app-deployment
+kubectl rollout pause deployment/app-deployment
+kubectl rollout resume deployment/app-deployment
+
+# check revisions
+kubectl rollout history deployment/app-deployment
