@@ -3,9 +3,14 @@ kind: Ingress
 metadata:
   name: k8s-ingress
 spec:
+  tls:
+    - hosts:
+        - podinfo.127.0.0.1.nip.io
+        - httpbin.127.0.0.1.nip.io
+      secretName: ingress-tls
   #ingressClassName: not needed due to default networking.ks.io enabled: kubectl describe ingressclasses.networking.k8s.io nginx
   rules:
-    - host: "podinfo.127.0.0.1.nip.io"
+    - host: "podinfo.127.0.0.1.nip.io" # Can be written whatever you wish
       http:
         paths:
           - path: /
