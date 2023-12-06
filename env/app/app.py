@@ -29,7 +29,7 @@ def get_features():
         "hostname": os.environ["HOSTNAME"],
         "feature-a": "available",
         "feature-b": "available",
-        # "feature-c": "available",
+        "feature-c": "available"
     }
 
 
