@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: k8s-ingress
+spec:
+  #ingressClassName: not needed due to default networking.ks.io enabled: kubectl describe ingressclasses.networking.k8s.io nginx
+  rules:
+    - host: "podinfo.127.0.0.1.nip.io"
+      http:
+        paths:
+          - path: /
+            backend:
+                service:
+                  name: podinfo
+                  port:
+                    number: 8080
+            pathType: Prefix
+    - host: "httpbin.127.0.0.1.nip.io"
+      http:
+        paths:
+          - path: /
+            backend:
+              service:
+                name: httpbin
+                port:
+                  name: http
+            pathType: Prefix
