@@ -19,3 +19,7 @@ kubectl get storageclass
 - all data from volumes
 - specific data from volumes
 - subPath
+
+Persis­ten­tVo­lum­eClaim (PVC) is a request for storage by a user.
+
+Persis­ten­tVolume (PV) is a piece of storage in the cluster that has been provis­ioned by an admini­str­ator.

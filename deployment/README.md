@@ -1,5 +1,5 @@
 ## DEPLOYMENT
-> Kind of controller of k8s pods. Monitoring stan of contoller to keep state of pods as desired, eg. 5 running pods if one of them break, recreate it. 
+> Deployment controller provides declar­ative updates for Pods and Replic­aSets. Monitoring stan of contoller to keep state of pods as desired, eg. 5 running pods if one of them break, recreate it. 
 
 # get deployment
 kubectl get deployment
@@ -10,7 +10,7 @@ kubectl delete pod nginx-deployment-123456789
 
 
 ## ReplicaSet
-
+> ensures that a specified number of pod replicas are running at any one time.
 > In structure in Worker Node looks:
 ![alt text](https://www.goglides.dev/images/DxLD59TaM3uCYYvv91BxJV803XHWXI5APfkcYOdRvlQ/w:880/mb:500000/ar:1/aHR0cHM6Ly93d3ct/Z29nbGlkZXMtZGV2/LnMzLmFtYXpvbmF3/cy5jb20vdXBsb2Fk/cy9hcnRpY2xlcy93/azI5d2ptMWR2Nng5/NHdxcWF5bi5wbmc)
 

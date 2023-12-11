@@ -1,5 +1,6 @@
 # NAMESPACE
 > split workgroups to smaller logical resources.
+> Kubernetes supports multiple virtual clusters backed by the same physical cluster. These virtual clusters are called namesp­aces.
 kubectl get namespace
 kubectl get pods --all-namespaces
 kubectl get pods -n staging

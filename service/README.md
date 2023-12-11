@@ -8,7 +8,7 @@ http http://10-244-0-46.default.pod.cluster.local:5000/pods/env-vars
 
 
 ## SERVICE
-
+> abstra­ction which defines a logical set of Pods and a policy by which to access them.
 > no mapping accross Worker nodes is required. It handle by Kubernetes engine.
 > DNS tool
 

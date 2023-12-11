@@ -1,6 +1,6 @@
 ## INGRESS
 expose many applications, and reduce additional costs using Ingress instead LoadBalancer.
-Ingress use routing rule in Ingress Controller
+Ingress use routing rule in Ingress Controller. It is a collection of rules that allow inbound connec­tions to reach the cluster services.
 
 Traffic > LB > Ingress managed LB > Ingress Controller > routing rule > services
 
