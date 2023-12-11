@@ -1,0 +1,20 @@
+wordpressUsername: admin
+wordpressPassword: password
+mariadb:
+  auth:
+    rootPassword: secretpassword
+wordpressBlogName: Nie moj kurs
+
+memcached:
+  enabled: true
+
+service:
+  type: ClusterIP
+ingress:
+  enabled: true
+  hostname: wordpress.127.0.0.1.nip.io
+  tls: true
+  extraTls:
+    - hosts:
+      - wordpress.127.0.0.1.nip.io
+      secretName: blog-tls

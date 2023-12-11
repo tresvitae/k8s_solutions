@@ -20,7 +20,7 @@ minikube tunnel
 kubectl get ingress
 
 ## INGRESS WITH TLS
-install mkcer from https://github.com/FiloSottile/mkcert
+install mkcert from https://github.com/FiloSottile/mkcert
 mkcert --key-file key.pem --cert-file cert.pem podinfo.127.0.0.1.nip.io httpbin.127.0.0.1.nip.io
 kubectl create secret tls ingress-tls --key key.pem --cert cert.pem
 kubectl apply -f ingress.yaml (with TLS)
